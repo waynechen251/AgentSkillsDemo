@@ -1,0 +1,33 @@
+# Claude Code 本地設定（不進版控）
+settings.local.json
+
+# 依賴目錄
+node_modules/
+venv/
+__pycache__/
+*.pyc
+
+# 建置輸出
+dist/
+build/
+*.egg-info/
+
+# OS 檔案
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE（保留 .vscode/settings.json，排除其餘）
+.vscode/*
+!.vscode/settings.json
+
+# 環境變數與機敏資訊
+.env
+.env.*
+*.pem
+*.key
+secrets/
+
+# 日誌
+*.log
+npm-debug.log*

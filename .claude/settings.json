@@ -1,0 +1,45 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebSearch",
+      "Bash(git status*)",
+      "Bash(git log*)",
+      "Bash(git diff*)",
+      "Bash(git branch*)",
+      "Bash(npm run lint*)",
+      "Bash(npm test*)"
+    ],
+    "ask": [
+      "Write",
+      "Edit",
+      "Bash(git add*)",
+      "Bash(git commit*)",
+      "Bash(git push*)",
+      "Bash(gh pr create*)"
+    ],
+    "deny": [
+      "Bash(rm -rf*)",
+      "Bash(git reset --hard*)",
+      "Bash(git push --force*)",
+      "Bash(git push * --force*)",
+      "Bash(cat .env*)",
+      "Bash(cat *secrets*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/lint-on-write.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

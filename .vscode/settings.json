@@ -1,0 +1,30 @@
+{
+  "// 說明": "此檔案為 VSCode 編輯器整合設定，確保 Claude Code 擴充套件正確載入 Skills",
+
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "files.trimTrailingWhitespace": false
+  },
+
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/__pycache__": true
+  },
+
+  "claude-code.skills.enabled": true,
+  "claude-code.skills.directory": ".claude/skills"
+}
